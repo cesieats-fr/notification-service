@@ -1,21 +1,19 @@
 import { Request, Response } from 'express';
 
-const register = (req: Request, res: Response) => {
+const getLastNotifcation = (req: Request, res: Response) => {
   res.status(200).json({ message: 'Hello, world!' });
 };
-
-const login = (req: Request, res: Response) => {
-  res.status(200).json({ message: 'Hello, world!' });
+const getNotifcation = (req: Request, res: Response) => {
+  res.status(200).json({ message: 'getfromID' });
 };
-
-const deleteAccount = (req: Request, res: Response) => {
+const addNotifcation = (req: Request, res: Response) => {
   res.status(200).json({ message: 'Hello, world!' });
 };
 
 const controller = {
-  register,
-  login,
-  deleteAccount,
+  getLastNotifcation,
+  getNotifcation,
+  addNotifcation
 };
 
 export default controller;
