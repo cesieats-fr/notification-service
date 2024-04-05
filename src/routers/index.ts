@@ -1,13 +1,13 @@
 import express, { Router, Request, Response } from 'express';
-import controller from './controller';
+import controller from '../controllers';
 
 const router: Router = express.Router();
 
-router.get('/getLast/{idUser}', controller.getLastNotifcation);
+router.get('/getLastNotification/{idUser}', controller.getLastNotification);
 
 // prend deux id en parametre l'id de l'utilisateur et le type de notification
-router.get('/getNotifcation', controller.getNotifcation);
+router.get('/getNotification', controller.getNotification);
 
-router.post('/addNotifcation/{idUser}', controller.addNotifcation);
+router.post('/addNotification/{idUser}', controller.addNotification);
 
 export default router;
