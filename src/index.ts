@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('notification-service');
+  res.send('notification-service ' + process.env.DB_USERNAME);
 });
 
 app.use('/', router);
